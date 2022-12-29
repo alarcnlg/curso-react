@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/curso-react/static/css/main.53ea0d24.css",
+    "main.js": "/curso-react/static/js/main.2a99802e.js",
+    "static/js/787.2843ca88.chunk.js": "/curso-react/static/js/787.2843ca88.chunk.js",
+    "static/media/delete-icon.svg": "/curso-react/static/media/delete-icon.04829cd512729628350dcf90b6bc747d.svg",
+    "index.html": "/curso-react/index.html",
+    "static/media/double-tick-icon.svg": "/curso-react/static/media/double-tick-icon.c9f86dceaf0688bb634102c9115b2825.svg",
+    "main.53ea0d24.css.map": "/curso-react/static/css/main.53ea0d24.css.map",
+    "main.2a99802e.js.map": "/curso-react/static/js/main.2a99802e.js.map",
+    "787.2843ca88.chunk.js.map": "/curso-react/static/js/787.2843ca88.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.53ea0d24.css",
+    "static/js/main.2a99802e.js"
+  ]
+}
