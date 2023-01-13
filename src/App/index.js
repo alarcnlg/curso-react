@@ -39,7 +39,9 @@ function App() {
 
   return (
     <>
-      <TodoHeader>
+      <TodoHeader
+        loading={loading}
+      >
         <TodoCounter
           totalTodos={totalTodos}
           completedTodos={completedTodos}
@@ -49,21 +51,30 @@ function App() {
           setSearchValue={setSearchValue}
         />
       </TodoHeader>
-      <TodoList>
-          { error && <TodosError error={error} />}
-          { loading && <TodosLoading />}
-          { (!loading && !searchedTodos.length) && <EmptyTodos />}
-          {
-            searchedTodos.map((todo) => (
-              <TodoItem
-                key={todo.text}
-                text={todo.text}
-                completed={todo.completed} 
-                onComplete={() => completeTodo(todo.text) }
-                onDelete={ () => deleteTodo(todo.text) } 
-              />
-            ))
-          }
+      <TodoList
+        error={error}
+        onError={() => <TodosError />}
+        
+        loading={loading}
+        onLoading={() => <TodosLoading /> }
+        
+        searchedTodos={searchedTodos}
+        onEmpytTodos={() => <EmptyTodos /> }
+
+        totalTodos={totalTodos}
+        searchText={searchValue}
+        onEmpytSearchResults={(searchText) => <p>No hay resultados para {searchText}</p> }
+
+      >
+        {todo =>
+          (<TodoItem
+            key={todo.text}
+            text={todo.text}
+            completed={todo.completed} 
+            onComplete={() => completeTodo(todo.text) }
+            onDelete={ () => deleteTodo(todo.text) } 
+          />)
+        }
       </TodoList>
         { !!openModal && 
           <Modal>
