@@ -13,6 +13,7 @@ import { TodosError } from '../TodosError';
 import { TodosLoading } from '../TodosLoading';
 import { EmptyTodos } from '../EmptyTodos';
 import { TodoHeader } from '../TodoHeader';
+import { ChangeAlert } from '../ChangeAlert';
 
 // const defaultTodos = [
 //   {text:'Cortar cebolla', completed:false },
@@ -35,6 +36,7 @@ function App() {
     searchValue,
     setSearchValue,
     addTodo,
+    sincronizeTodos
   } = useTodos();
 
   return (
@@ -86,6 +88,10 @@ function App() {
         }
       <CreateTodoButton 
         setOpenModal={setOpenModal}
+      />
+
+      <ChangeAlert
+        sincronize={sincronizeTodos}
       />
     </>
   );
